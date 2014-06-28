@@ -51,7 +51,7 @@ a {
     position: absolute;
     right: 0;
     top: 0;
-    background-image:url('https://dl.dropboxusercontent.com/u/32788312/freddie.JPG');
+    background-image:url('https://github.com/lmdaly11/CreativeCodePortfolio/blob/gh-pages/assets/image/freddie.JPG');
     background-size:cover;
     background-attachment:fixed;
 }
@@ -87,7 +87,7 @@ a {
   text-align:center;
   text-decoration:none;
   text-shadow:5px 5px 0 #B3FFD1;
-  font-family: "Gill Sans";
+  font-family: 'Anton', sans-serif;
 }
 #sidebar-footer {
   position:absolute;bottom:5px;

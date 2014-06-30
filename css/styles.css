@@ -33,6 +33,15 @@ a {
     border-style: solid;
     border-width: 1 px;
     border-color: #B3FFD1;
+    height: 359px;
+}
+
+#content {
+  margin: 50px auto 0px auto; padding: 25px 25px 15px 25px;
+  width: 400px; min-width: 300px; overflow: auto;
+  border-left: 1px solid #444; border-top: 1px solid #444;
+  border-right: 1px solid #333; border-bottom: 1px solid #333;
+  background-color: #3d3d3d;
 }
 
 .column {
@@ -61,7 +70,7 @@ a {
 }
 
 #main {
-    background-color:#E3FFF6;
+    background-color: rgba(255,255,255,0.9);
 }
 #main .img-circle {
   margin-top:18px;

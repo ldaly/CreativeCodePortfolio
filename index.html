@@ -12,6 +12,7 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
+	<script type="text/javascript" src="assets/wall/processing.js"></script>
 </head>
 
 <body>
@@ -52,9 +53,35 @@
 								<div class="col-sm-10">
 									<h3>Example</h3>
 									<div class="processing">
-										<h3>Ideally, we'd like to place the processing app example here.</h3>
-										<script src="processing-1.0.0.min.js"></script>
-										<canvas data-processing-sources="wall/wall.pde"></canvas>
+										<h3>Ideally we'd like to place the processing app example here.</h3>
+										<script type="text/processing">
+
+										void setup() {
+  									size(400,300);
+										}
+
+						void draw() {
+  						background(46, 230, 190);
+  						fill(242, 113, 48);
+  						triangle(-6, -6, 406, -6, mouseX, mouseY);
+  						stroke(0);
+  						strokeWeight(5);
+
+  				if (mousePressed ==true) {
+      			stroke(255);
+      			fill(255);
+      			textSize(50);
+      			textAlign(CENTER, BOTTOM);
+      			text("LAURA", 200, 290);
+
+} else {
+      stroke(0);
+  }
+}
+										</script>
+
+										<canvas id="sketch"></canvas>
+
 
 									</div>
 									<h4><span class="label label-default">creativecode.io</span></h4>

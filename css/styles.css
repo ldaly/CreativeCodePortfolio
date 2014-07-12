@@ -37,7 +37,10 @@ a {
 }
 
 .processing {
-    
+    border-style: solid;
+    border-width: 1 px;
+    border-color: #B3FFD1;
+
 }
 
 .map1 {

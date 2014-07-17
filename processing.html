@@ -24,11 +24,13 @@
         <div class="column col-sm-3" id="sidebar">
           <a class="logo" href="index.html">LAURA</a>
           <ul class="nav">
-            <li class="active"><a href="bio.html">bio</a>
+            <li class="active"><a href="index.html">HOME</a>
             </li>
-            <li class"active"><a href="processing.html">Processing</a>
+            <li class="active"><a href="bio.html">BIO</a>
             </li>
-            <li><a href="#Portfolio">Portfolio</a>
+            <li class "active"><a href="processing.html">PROCESSING</a>
+            </li>
+            <li><a href="#Portfolio">PORTFOLIO</a>
             </li>
           </ul>
           <ul class="nav hidden-xs" id="sidebar-footer">
@@ -54,96 +56,96 @@
               <div class="row">
                 <div class="col-sm-10">
 
-            <!-- This is the processing sketch insert -->
+                  <!-- This is the processing sketch insert -->
 
                   <div class="processing">
                     <h3>Processing Sketch 1</h3>
-                    <p>test it out! (give a click)<p>
-                    <script type="text/processing">
+                    <p>test it out! (give a click)
+                      <p>
+                        <script type="text/processing">
+                          void setup() {
+                            size(400, 300);
+                          }
 
-                    void setup() {
-                    size(400,300);
-                    }
+                          void draw() {
+                            background(46, 230, 190);
+                            fill(242, 113, 48);
+                            triangle(-6, -6, 406, -6, mouseX, mouseY);
+                            stroke(0);
+                            strokeWeight(5);
 
-                    void draw() {
-                    background(46, 230, 190);
-                    fill(242, 113, 48);
-                    triangle(-6, -6, 406, -6, mouseX, mouseY);
-                    stroke(0);
-                    strokeWeight(5);
+                            if (mousePressed == true) {
+                              stroke(255);
+                              fill(255);
+                              textSize(50);
+                              textAlign(CENTER, BOTTOM);
+                              text("LAURA", 200, 290);
 
-                    if (mousePressed ==true) {
-                    stroke(255);
-                    fill(255);
-                    textSize(50);
-                    textAlign(CENTER, BOTTOM);
-                    text("LAURA", 200, 290);
+                            } else {
+                              stroke(0);
+                            }
+                          }
+                        </script>
 
-                    } else {
-                    stroke(0);
-                      }
-                    }
-                    </script>
+                        <canvas id="sketch"></canvas>
 
-                    <canvas id="sketch"></canvas>
-
-        <h4><a href="http://processing.org/" span class="label label-default">processing.org</a></span></h4>
-        <h4>
+                        <h4><a href="http://processing.org/" span class="label label-default">processing.org</a></span></h4>
+                        <h4>
           <small class="text-muted">June 2014 • Processing Sketch Example 2</a></small>
         </h4>
-                </div>
-            <!-- End processing sketch -->
+                  </div>
+                  <!-- End processing sketch -->
 
-            <!-- This is the processing sketch insert -->
+                  <!-- This is the processing sketch insert -->
 
                   <div class="processing2">
                     <h3>Processing Sketch 2</h3>
-                    <p>test it out! (rollover)<p>
+                    <p>test it out! (rollover)
+                      <p>
 
-<script type="text/processing">
+                        <script type="text/processing">
+                          PImage img1;
+                          PImage img2;
+                          PImage img3;
+                          PImage img4;
 
-  PImage img1;
-  PImage img2;
-  PImage img3;
-  PImage img4;
+                          void setup() {
+                            size(588, 588);
+                            img1 = loadImage("assets/rollover_map/grid_rollover/w1a.png");
+                            img2 = loadImage("assets/rollover_map/grid_rollover/w2a.png");
+                            img3 = loadImage("assets/rollover_map/grid_rollover/w3a.png");
+                            img4 = loadImage("assets/rollover_map/grid_rollover/w4a.png");
+                          }
 
-  void setup() {
-    size(588, 588);
-    img1 = loadImage("assets/rollover_map/grid_rollover/w1a.png");
-    img2 = loadImage("assets/rollover_map/grid_rollover/w2a.png");
-    img3 = loadImage("assets/rollover_map/grid_rollover/w3a.png");
-    img4 = loadImage("assets/rollover_map/grid_rollover/w4a.png");
-  }
+                          void draw() {
+                            background(0);
+                            stroke(255);
+                            line(294, 0, 294, 588);
+                            line(0, 294, 588, 294);
 
-  void draw() {
-    background(0);
-    stroke(255);
-    line(294, 0, 294, 588);
-    line(0, 294, 588, 294);
+                            if (mouseX < 294 && mouseY < 294) {
+                              //    rect(0,0,294,294);
+                              image(img1, 0, 0);
+                            } else if (mouseX > 294 && mouseY < 294) {
+                              //    rect(294,0,294,294);
+                              image(img2, 294, 0);
+                            } else if (mouseX < 294 && mouseY > 294) {
+                              //    rect(0,294,294,294);
+                              image(img3, 0, 294);
+                            } else if (mouseX > 294 && mouseY > 294) {
+                              //    rect(294,294,588,588);
+                              image(img4, 294, 294);
+                            }
 
-    if (mouseX < 294 && mouseY < 294) {
-      //    rect(0,0,294,294);
-      image(img1, 0, 0);
-    } else if (mouseX > 294 && mouseY < 294) {
-      //    rect(294,0,294,294);
-      image(img2, 294, 0);
-    } else if (mouseX < 294 && mouseY > 294) {
-      //    rect(0,294,294,294);
-      image(img3, 0, 294);
-    } else if (mouseX > 294 && mouseY > 294) {
-      //    rect(294,294,588,588);
-      image(img4, 294, 294);
-    }
+                            if (mousePressed == true) {
+                              filter(INVERT);
+                            }
+                          }
+                        </script>
 
-    if (mousePressed == true) {
-      filter(INVERT);
-    }
-  }
-</script>
-
-                    <canvas id="sketch2"></canvas>
+                        <canvas id="sketch2"></canvas>
                   </div>
-            <!-- End processing sketch -->
+                  <!-- End processing sketch -->
 
                   <h4><a href="http://processing.org/" span class="label label-default">processing.org</a></span></h4>
                   <h4>
@@ -152,7 +154,7 @@
                 </div>
               </div>
 
-<!-- end page content -->
+              <!-- end page content -->
               <div class="col-sm-12 ">
                 <div class="page-header text-muted divider ">
                   Contact
